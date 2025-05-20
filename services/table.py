@@ -131,7 +131,7 @@ def q_d_p():
         return custom_table
                
     else:
-        return "Headers not found"
+        return {}
     
     
 

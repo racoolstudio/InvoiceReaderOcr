@@ -21,9 +21,12 @@ def getAll():
     info=getInfo()
     table=get_table()
 
-    return jsonify(info,table)
+    return {
+        'InvoiceInfo': getInfo(),
+        'TableInfo' :get_table()
+    }
 
 
 # Uncomment if you are deploying it locally and not using docker 
-# if __name__ == '__main__':
-#     app.run(host='0.0.0.0', port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
